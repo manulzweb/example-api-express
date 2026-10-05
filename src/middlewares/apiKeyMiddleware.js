@@ -18,39 +18,39 @@
  */
 const validateApiKey = (req, res, next) => {
 
-    /**
-     * Obtener API KEY desde los headers
-     *
-     * @type {string|undefined}
-     */
-    const apiKey = req.headers["x-api-key"];
+    // /**
+    //  * Obtener API KEY desde los headers
+    //  *
+    //  * @type {string|undefined}
+    //  */
+    // const apiKey = req.headers["x-api-key"];
 
-    /**
-     * Validar si la API KEY fue enviada
-     */
-    if (!apiKey) {
+    // /**
+    //  * Validar si la API KEY fue enviada
+    //  */
+    // if (!apiKey) {
 
-        return res.status(401).json({
-            success: false,
-            message: "API KEY requerida"
-        });
-    }
+    //     return res.status(401).json({
+    //         success: false,
+    //         message: "API KEY requerida"
+    //     });
+    // }
 
-    /**
-     * Comparar API KEY enviada
-     * con la variable de entorno
-     */
-    if (apiKey !== process.env.API_KEY) {
+    // /**
+    //  * Comparar API KEY enviada
+    //  * con la variable de entorno
+    //  */
+    // if (apiKey !== process.env.API_KEY) {
 
-        return res.status(403).json({
-            success: false,
-            message: "API KEY inválida"
-        });
-    }
+    //     return res.status(403).json({
+    //         success: false,
+    //         message: "API KEY inválida"
+    //     });
+    // }
 
-    /**
-     * Continuar flujo de ejecución
-     */
+    // /**
+    //  * Continuar flujo de ejecución
+    //  */
     next();
 };
 

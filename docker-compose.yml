@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    container_name: example-api-express
+    ports:
+      - "80:3000"
